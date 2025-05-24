@@ -36,36 +36,36 @@ train.py: Entrena un modelo RandomForestClassifier usando un CSV de películas, 
 predict.py: Carga el modelo y predice la rentabilidad de nuevas películas a partir de un CSV de entrada.
 Estructura del Proyecto
 .
-├── Dockerfile
-├── train.py
-├── predict.py
-├── requirements.txt
-└── train.csv    	# Archivo de entrenamiento
+├── Dockerfile <br>
+├── train.py <br>
+├── predict.py <br>
+├── requirements.txt <br>
+└── train.csv    	# Archivo de entrenamiento <br>
 
-Cómo ejecutar con Docker
-1. Construir la imagen
+Cómo ejecutar con Docker   <br>
+1. Construir la imagen  <br>
 
 
-docker build -t mi_imagen_entrenamiento
+docker build -t mi_imagen_entrenamiento   <br>
 
-2. Entrenar el modelo
+2. Entrenar el modelo  <br>
 
-docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python train.py train.csv
+docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python train.py train.csv  <br>
 
-Hacer predicciones
+Hacer predicciones  <br>
 
 docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python predict.py train.csv
 
-Esto generará predicciones.csv con una nueva columna rentable_pred.
-Requisitos
-Docker  version 28.1.1
+Esto generará predicciones.csv con una nueva columna rentable_pred.<br>
+Requisitos <br>
+Docker  version 28.1.1  <br>
 
 
-CSV de entrada con al menos las columnas: budget, popularity
+CSV de entrada con al menos las columnas: budget, popularity  <br>
 
 
-Dependencias gestionadas por requirements.txt:
-pandas
-scikit-learn
-joblib
+Dependencias gestionadas por requirements.txt:<br>
+pandas  <br>
+scikit-learn  <br>
+joblib  <br>
 
