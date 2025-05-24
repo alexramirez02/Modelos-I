@@ -23,3 +23,49 @@ Pasos Fase-1 <br>
 3. una vez dentro del los archivos de colab simplemente es ejecutar cada una de las celdas ya que los archivos necesarios estan cargados directamente desde google drive <br>
 
 es ejecutar cada una de las celdas ya que los archivos necesarios estan cargados directamente desde google drive <br>
+
+
+FASE 2. Despliegue en container:
+
+Este proyecto entrena un modelo de aprendizaje automático para predecir si una película será rentable, usando datos como el presupuesto y la popularidad. El modelo se despliega en un contenedor Docker con scripts separados para entrenamiento y predicción.
+
+Cómo funciona este proyecto
+train.py: Entrena un modelo RandomForestClassifier usando un CSV de películas, y guarda el modelo en disco (modelo_tmdb.joblib).
+
+
+predict.py: Carga el modelo y predice la rentabilidad de nuevas películas a partir de un CSV de entrada.
+Estructura del Proyecto
+.
+├── Dockerfile
+├── train.py
+├── predict.py
+├── requirements.txt
+└── train.csv    	# Archivo de entrenamiento
+
+Cómo ejecutar con Docker
+1. Construir la imagen
+
+
+docker build -t mi_imagen_entrenamiento
+
+2. Entrenar el modelo
+
+docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python train.py train.csv
+
+Hacer predicciones
+
+docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python predict.py train.csv
+
+Esto generará predicciones.csv con una nueva columna rentable_pred.
+Requisitos
+Docker  version 28.1.1
+
+
+CSV de entrada con al menos las columnas: budget, popularity
+
+
+Dependencias gestionadas por requirements.txt:
+pandas
+scikit-learn
+joblib
+
