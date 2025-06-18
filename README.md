@@ -115,8 +115,14 @@ Estructura del Proyecto <br>
 Para construir la imagen en docker se utilizo <br>
 docker build -t modelo_tercera_entrega .<br>
 
+En este punto Docker utiliza el Dockerfile para instalar Python, las dependencias del proyecto y copiar todos los scripts necesarios dentro de la imagen. El resultado es una imagen llamada modelo_tercera_entrega.<br>
+
+
 Para ejecución del contenedor<br>
 docker run -p 5000:5000 modelo_tercera_entrega<br>
+
+El contenedor expone el puerto 5000 para que se  pueda acceder a la API REST desde el navegador o herramientas como Postman o curl.<br>
+
 
 La API quedará disponible en:<br>
 http://localhost:5000<br>
@@ -125,6 +131,7 @@ Endpoints Disponibles<br>
 GET /<br>
 Mensaje de prueba<br>
 {"message": "API REST activa"}<br>
+Devuelve un mensaje simple de verificación de que la API está activa.<br>
 
 
 GET /train<br>
@@ -144,12 +151,12 @@ Respuesta:<br>
 
 
 
-Pruebas<br>
-Se puede usar:<br>
-client.py<br>
 
+Pruebas<br>
+Se puede usar client.py<br>
 python3 client.py<br>
 
+Este script hace una solicitud POST a /predict con un ejemplo de entrada para verificar el funcionamiento del modelo.<br>
 
 
 
