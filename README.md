@@ -9,7 +9,11 @@ Alexander de Jesus Ramirez Marulanda - cc: 98552564 - Ing. Sistemas<br>
 
 
 
+
+
+
 FASE 1. Modelo predictivo: <br>
+
 
 
 Para nuestra primera entrega se trabajaron dos archivos , el primero se trato de la exploracion de datos y el segundo el tratamiento con dos modelos predictivos <br>
@@ -23,6 +27,8 @@ peliculas teniendo en cuenta varios factores como actores, genero, lenguaje, pop
 3. una vez dentro del los archivos de colab simplemente es ejecutar cada una de las celdas ya que los archivos necesarios estan cargados directamente desde google drive <br>
 
 es ejecutar cada una de las celdas ya que los archivos necesarios estan cargados directamente desde google drive <br>
+
+
 
 
 
@@ -73,6 +79,9 @@ Dependencias gestionadas por requirements.txt:<br>
 pandas  <br>
 scikit-learn  <br>
 joblib  <br>
+
+
+
 
 
 
