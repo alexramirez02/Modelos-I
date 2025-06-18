@@ -99,7 +99,7 @@ Este proyecto implementa una aplicación REST en Flask que permite:<br>
 
 Se utiliza aprendizaje automático (Random Forest) para predecir la rentabilidad basándose en el presupuesto y la popularidad.<br>
 
-Estructura del Proyecto<br>
+Estructura del Proyecto <br>
 ---<br>
 ├── apirest.py # Script principal de la API REST<br>
  ├── train.py # Entrenamiento del modelo<br>
