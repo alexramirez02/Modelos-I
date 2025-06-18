@@ -148,6 +148,8 @@ Respuesta:<br>
 {<br>
   "rentable_pred": 1<br>
 }<br>
+Realiza una predicción de rentabilidad, donde 1 indica rentable y 0 no rentable.<br>
+
 
 
 
