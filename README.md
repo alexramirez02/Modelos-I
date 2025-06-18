@@ -68,16 +68,13 @@ CSV de entrada con al menos las columnas: budget, popularity  <br>
 
 
 Dependencias gestionadas por requirements.txt:<br>
-
 pandas  <br>
 scikit-learn  <br>
 joblib  <br>
 
 
 
-
 FASE 3. API REST:
-
 
 #API REST para prediccion de rentabilidad de peliculas<br>
 Este proyecto implementa una aplicación REST en Flask que permite:<br>
