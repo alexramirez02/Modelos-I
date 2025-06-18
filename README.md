@@ -8,9 +8,9 @@ Steven Alipio Berrio - cc: 1036661504 - Ing. Sistemas<br>
 Alexander de Jesus Ramirez Marulanda - cc: 98552564 - Ing. Sistemas<br>
 
 
-Este proyecto surge como una solución para estimar la rentabilidad de películas a partir de datos disponibles en fuentes como TMDB (The Movie Database). Utiliza modelos de machine learning entrenados en Python para predecir si una película será rentable, basado en características como presupuesto, género, idioma, <br>popularidad, entre otros.<br>
+Este proyecto surge como una solución para estimar la rentabilidad de películas a partir de datos disponibles en fuentes como TMDB (The Movie Database). Utiliza modelos de machine learning entrenados en Python para predecir si una película será rentable, basado en características como presupuesto, género, idioma, popularidad, entre otros.<br>
 
-
+El proyecto consta de tres fases  a saber:<br>
 
 
 
