@@ -25,15 +25,20 @@ Pasos Fase-1 <br>
 es ejecutar cada una de las celdas ya que los archivos necesarios estan cargados directamente desde google drive <br>
 
 
-FASE 2. Despliegue en container:
+FASE 2. Despliegue en container:<br>
 
-Este proyecto entrena un modelo de aprendizaje automático para predecir si una película será rentable, usando datos como el presupuesto y la popularidad. El modelo se despliega en un contenedor Docker con scripts separados para entrenamiento y predicción.
+Este proyecto entrena un modelo de aprendizaje automático para predecir si una película será rentable, usando datos como el presupuesto y la popularidad. El modelo se despliega en un contenedor Docker con scripts separados para entrenamiento y predicción.<br>
 
-Cómo funciona este proyecto
-train.py: Entrena un modelo RandomForestClassifier usando un CSV de películas, y guarda el modelo en disco (modelo_tmdb.joblib).
+Cómo funciona este proyecto : <br>
+
+train.py:<br>
+Entrena un modelo RandomForestClassifier usando un CSV de películas, y guarda el modelo en disco (modelo_tmdb.joblib).<br>
 
 
-predict.py: Carga el modelo y predice la rentabilidad de nuevas películas a partir de un CSV de entrada.
+predict.py:<br>
+Carga el modelo y predice la rentabilidad de nuevas películas a partir de un CSV de entrada.<br>
+
+
 Estructura del Proyecto
 .
 ├── Dockerfile <br>
@@ -42,32 +47,34 @@ Estructura del Proyecto
 ├── requirements.txt <br>
 └── train.csv    	# Archivo de entrenamiento <br>
 
+
 Cómo ejecutar con Docker   <br>
+
 1. Construir la imagen  <br>
-
-
 docker build -t mi_imagen_entrenamiento   <br>
 
-2. Entrenar el modelo  <br>
 
+2. Entrenar el modelo  <br>
 docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python train.py train.csv  <br>
 
 Hacer predicciones  <br>
-
 docker run --rm -v "$(pwd)":/app mi_imagen_entrenamiento python predict.py train.csv
 
 Esto generará predicciones.csv con una nueva columna rentable_pred.<br>
+
 Requisitos <br>
 Docker  version 28.1.1  <br>
-
-
 CSV de entrada con al menos las columnas: budget, popularity  <br>
 
 
 Dependencias gestionadas por requirements.txt:<br>
+
 pandas  <br>
 scikit-learn  <br>
 joblib  <br>
+
+
+
 
 FASE 3. API REST:
 
@@ -110,7 +117,6 @@ Mensaje de prueba<br>
 
 GET /train<br>
 Ejecuta el entrenamiento del modelo usando train.csv. El modelo se guarda en modelo_tmdb.joblib.<br>
-
 
 POST /predict<br>
 Devuelve la predicción (0 = no rentable, 1 = rentable).<br>
