@@ -11,6 +11,7 @@ Alexander de Jesus Ramirez Marulanda - cc: 98552564 - Ing. Sistemas<br>
 
 FASE 1. Modelo predictivo: <br>
 
+
 Para nuestra primera entrega se trabajaron dos archivos , el primero se trato de la exploracion de datos y el segundo el tratamiento con dos modelos predictivos <br>
 que serian el random forest y el SVM aplicados a un un conjunto de daros llamado TMDB Box Office Prediction, el cual trata de estimar la recaudacion de dinero de las
 peliculas teniendo en cuenta varios factores como actores, genero, lenguaje, popularidad entre otros.
@@ -24,7 +25,9 @@ peliculas teniendo en cuenta varios factores como actores, genero, lenguaje, pop
 es ejecutar cada una de las celdas ya que los archivos necesarios estan cargados directamente desde google drive <br>
 
 
+
 FASE 2. Despliegue en container:<br>
+
 
 Este proyecto entrena un modelo de aprendizaje automático para predecir si una película será rentable, usando datos como el presupuesto y la popularidad. El modelo se despliega en un contenedor Docker con scripts separados para entrenamiento y predicción.<br>
 
@@ -74,6 +77,7 @@ joblib  <br>
 
 
 FASE 3. API REST:
+
 
 #API REST para prediccion de rentabilidad de peliculas<br>
 Este proyecto implementa una aplicación REST en Flask que permite:<br>
